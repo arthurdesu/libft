@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 19:06:01 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/12 19:32:44 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/14 10:02:17 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if (size <= dst)
+	if (size <= dst_len)
 		return ((size + src_len));
 	while ((i < size - dst_len - 1) && src[i])
 	{
@@ -34,9 +34,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 // int main()
 // {
-//     char dst[10] = "1337";
+//     char dst[5] = "13";
 //     char src[20] = "LEEEEEEEEET";
-//     ft_strlcat(dst, src, 10);
+//     ft_strlcat(dst, src, 5);
 //     printf("%s\n", dst);
 //     return (0);
 // }

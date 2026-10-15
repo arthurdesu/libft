@@ -1,20 +1,14 @@
-NAME    = program
-SRC     = main.c
-OBJ     = $(SRC:.c=.o)
-
+NAME    = a
 CC      = cc
-CFLAGS  = -Wall -Wextra -Werror
+CFLAGS  = -Wall -Wextra -Werror # -lbsd -fsanitize=address -g3
+
+SRCS    = $(wildcard *.c)
+HEADER  = libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-clean:
-	rm -f $(OBJ)
+$(NAME): $(SRCS)  $(HEADER) 
+	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
 fclean: clean
 	rm -f $(NAME)
