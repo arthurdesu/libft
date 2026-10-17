@@ -6,11 +6,10 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 17:00:15 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/17 15:54:37 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/17 15:57:32 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)
