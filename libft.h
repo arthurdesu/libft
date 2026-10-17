@@ -6,24 +6,16 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:00:25 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/16 10:00:27 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/17 11:41:16 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
-# include <string.h>
 # include <stdlib.h>
-# include <stdint.h>
 # include <limits.h>
-# include <ctype.h>
-# include <signal.h>
-# include <sys/wait.h>
-# include <fcntl.h>
-# include <bsd/string.h>
 
 typedef struct s_list
 {
@@ -67,6 +59,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			**ft_split(char const *s, char c);
 
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 unsigned	int		ft_lstsize(t_list *lst);
 
