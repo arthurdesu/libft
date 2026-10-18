@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:30:17 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/12 19:17:11 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/18 18:26:27 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
-
-// int main(void)
-// {
-// 	for (int c = 125; c <= 130; c++)
-//     	printf("%c: %d\n", c, ft_isascii(c));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:36:00 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/12 19:18:16 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/18 18:28:37 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
-
-// int main(void)
-// {
-// 	for (int c = 28; c <= 37; c++)
-//     	printf("%c: %d\n", c, ft_isprint(c));
-// 	return (0);
-// }

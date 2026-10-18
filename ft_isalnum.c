@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:13:03 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/12 19:16:21 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/18 18:25:05 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return ((c >= '0' && c <= '9')
-		|| (c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
-
-// int main(void)
-// {
-// 	for (int c = '0'; c <= '9'; c++)
-//     	printf("%c: %d\n", c, ft_isalnum(c));
-// 	return (0);
-// }

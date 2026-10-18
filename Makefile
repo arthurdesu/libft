@@ -1,6 +1,3 @@
-CC      = cc
-CFLAGS  = -Wall -Wextra -Werror
-
 SRCS    = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -44,6 +41,9 @@ SRCS    = ft_isalpha.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
 	ft_lstmap.c
+
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror
 
 OBJS	= $(SRCS:.c=.o)
 HEADER  = libft.h

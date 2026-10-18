@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:04:58 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/12 13:29:00 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/18 18:28:28 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
-
-// int main(void)
-// {
-// 	for (int c = 'A'; c <= 'Z'; c++)
-//     	printf("%c: %d\n", c, ft_isdigit(c));
-// 	return (0);
-// }
