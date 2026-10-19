@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 22:48:29 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/14 10:39:50 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 19:44:10 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(concatenate, s2, s2_len + s1_len + 1);
 	return (concatenate);
 }
-
-// int	main()
-// {
-// 	char *s1 = "Hello";
-// 	char *s2 = "World";
-
-// 	printf("|%s|\n", ft_strjoin(s1, s2));
-// 	return (0);
-// }

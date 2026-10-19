@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 17:51:01 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/15 17:57:34 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 17:34:15 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	new = malloc(sizeof(t_list *));
+	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
 	new->content = content;

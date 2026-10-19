@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 22:18:26 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/12 22:28:14 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 21:31:49 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-// int	main()
-// {
-// 	for (int c = 'a'; c <= 'z'; c++)
-// 		printf("%c\n", ft_toupper(c));
-// 	return (0);
-// }

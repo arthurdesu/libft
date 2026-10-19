@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:00:25 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/18 18:43:14 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 22:24:36 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <string.h>
-# include <stdio.h>
-# include <ctype.h>
 
 typedef struct s_list
 {

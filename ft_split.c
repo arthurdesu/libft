@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:59:57 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/15 09:47:21 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 19:22:05 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ static	size_t	ft_countwords(char const *s, char c)
 	size_t	i;
 	size_t	count;
 
-	if (!s)
-		return (0);
 	i = 0;
 	count = 0;
 	while (s[i])
@@ -42,33 +40,43 @@ static	size_t	ft_countwords(char const *s, char c)
 	return (count);
 }
 
-static	void	ft_cpy(char **splited, char const *s, char c, size_t words_nbr)
+static	void	ft_free(char **splited, size_t i)
+{
+	while (i > 0)
+	{
+		free(splited[i]);
+		i--;
+	}
+	free(splited[i]);
+	free(splited);
+}
+
+static	int	ft_cpy(char **splited, char const *s, char c, size_t words_nbr)
 {
 	size_t	i;
-	size_t	j;
+	size_t	end;
 	size_t	start;
 
 	i = 0;
 	start = ft_getstart(s, c);
-	j = start;
+	end = start;
 	while (i < words_nbr)
 	{
-		while (s[j] && s[j] != c)
-			j++;
-		splited[i] = ft_substr(s, start, j - start);
+		while (s[end] && s[end] != c)
+			end++;
+		splited[i] = ft_substr(s, start, end - start);
 		if (!splited[i])
 		{
-			while (i > 0)
-				free(splited[i--]);
-			free(splited);
-			return ;
+			ft_free(splited, i);
+			return (1);
 		}
-		while (s[j] && s[j] == c)
-			j++;
-		start = j;
+		while (s[end] && s[end] == c)
+			end++;
+		start = end;
 		i++;
 	}
 	splited[words_nbr] = NULL;
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -79,14 +87,10 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words_nbr = ft_countwords(s, c);
-	splited = malloc(words_nbr * sizeof(char *) + (sizeof(char *)));
+	splited = malloc((words_nbr + 1) * (sizeof(char *)));
 	if (!splited)
 		return (NULL);
-	if (!*s)
-	{
-		splited[0] = NULL;
-		return (splited);
-	}
-	ft_cpy(splited, s, c, words_nbr);
+	if (ft_cpy(splited, s, c, words_nbr))
+		return (NULL);
 	return (splited);
 }

@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 22:23:33 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/12 22:28:04 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 21:31:38 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
-// int	main()
-// {
-// 	for (int c = 'A'; c <= 'Z'; c++)
-// 		printf("%c\n", ft_tolower(c));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 10:18:06 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/14 12:37:49 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 21:22:29 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ static	int	ft_search(char const *set, char c)
 static	size_t	ft_count(char const *s, char const *set, size_t *start)
 {
 	size_t	i;
-	size_t	j;
+	int		j;
 	size_t	count;
 
 	i = 0;
-	j = ft_strlen(s) - 1;
+	j = (int)(ft_strlen(s) - 1);
 	count = ft_strlen(s);
 	while (s[i])
 	{

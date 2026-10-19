@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 08:52:37 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/13 09:30:41 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/19 20:14:29 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + s_len));
 	return (NULL);
 }
-
-// int main()
-// {
-// 	int c = '8';
-// 	const char s[30] = "1337; the future is loading!";
-// 	printf("%s\n", ft_strrchr(s, c));
-// 	printf("%s\n", strrchr(s, c));
-// 	return (0);
-// }
