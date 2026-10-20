@@ -65,7 +65,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "     \033[1;38;2;51;255;208mlibrary file is removed\033[0m" 
+	@echo "     \033[1;38;2;51;255;208mLibrary file is removed\033[0m" 
 
 re: fclean all
 
