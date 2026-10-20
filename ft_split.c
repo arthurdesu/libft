@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:59:57 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/19 19:22:05 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/20 15:39:07 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,9 @@ static	void	ft_free(char **splited, size_t i)
 {
 	while (i > 0)
 	{
-		free(splited[i]);
 		i--;
+		free(splited[i]);
 	}
-	free(splited[i]);
 	free(splited);
 }
 
