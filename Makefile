@@ -54,7 +54,7 @@ NAME    = libft.a
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	@ar cr $@ $^
+	@ar crs $@ $^
 	@echo "     \033[1;38;2;51;255;208mLibrary is created\033[0m"  
 
 all: $(NAME)
