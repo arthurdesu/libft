@@ -64,7 +64,7 @@ int main(void)
  
 ## Technical choices
  
-- **Static library:** Created using `ar rc` to archive compiled object files into libft.a.
+- **Static library:** Created using `ar rcs` to archive compiled object files into libft.a.
 - **Behavior matches libc:** Functions aim to reproduce the expected behavior of their standard counterparts, including relevant edge cases.
 - **Memory safety:** Functions that allocate memory check for allocation failure and handle it according to their specifications.
 - **Overlap handling:** `ft_memmove` handles overlapping buffers by choosing the copy direction.
