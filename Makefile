@@ -55,17 +55,17 @@ NAME    = libft.a
 
 $(NAME): $(OBJS)
 	@ar rc $@ $^
-	@echo "     \033[1;38;2;51;255;208mLibrary is created\033[0m"
+	@echo "     Library is created"
 
 all: $(NAME)
 
 clean:
 	@rm -f $(OBJS)
-	@echo "     \033[1;38;2;51;255;208mObject files are removed\033[0m"
+	@echo "     Object files are removed"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "     \033[1;38;2;51;255;208mLibrary file is removed\033[0m" 
+	@echo "     Library file is removed" 
 
 re: fclean all
 
