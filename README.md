@@ -62,6 +62,29 @@ int main(void)
 }
 ```
  
+## Detailed description of the static library `libft.a`
+ 
+### What is a static library?
+ 
+- **Definition:** an archive (`.a` file) that bundles many compiled object files (`.o`) into one file.
+- **Static linking:** at link time, the linker copies the code it needs from the archive directly into the final executable.
+- **Result:** the executable is self-contained and does not need `libft.a` at runtime.
+- **Compared to a dynamic library (`.so`):** a dynamic library is loaded when the program runs.
+### How `libft.a` is built
+ 
+1. **Compile:** each `.c` file is compiled to an object file, without linking.
+   - Command: `cc -Wall -Wextra -Werror -c file.c -o file.o`
+   - Each `.o` contains machine code for one source file.
+2. **Archive:** all `.o` files are packed into `libft.a` with `ar rc libft.a *.o`.
+   - `r`: insert files into the archive, replacing older versions.
+   - `c`: create the archive if it does not exist, without warning.
+3. **Rebuild only what changed:** the Makefile rebuilds an `.o` file only when its `.c` file or the header changed, and does not relink if nothing changed.
+### What is inside `libft.a`
+ 
+- **One object file per source file:** each `ft_*.c` file becomes one member of the archive.
+- **Symbols:** every function from `libft.h` is exported with its `ft_` prefix, which avoids name conflicts with the standard library.
+- **Header:** `libft.h` is *not* inside the archive. It holds the prototypes, the `t_list` structure and the includes, and must be included by any project using the library.
+
 ## Technical choices
  
 - **Static library:** Created using `ar rc` to archive compiled object files into libft.a.
@@ -70,12 +93,11 @@ int main(void)
 - **Overlap handling:** `ft_memmove` handles overlapping buffers by choosing the copy direction.
 - **Lists:** `ft_lstclear` and `ft_lstdelone` take a `del` function so any content type can be freed correctly.
 
-
 ## Resources
 
 ### Classic references
 
-- Linux man pages (`man 3 <function>`) for every re-implemented libc function
+- Linux man pages (`man <function>`) for every re-implemented libc function
 - *The C Programming Language*, Kernighan & Ritchie
 - [cppreference.com – C standard library](https://en.cppreference.com/w/c)
 - [GNU Make manual](https://www.gnu.org/software/make/manual/make.html)
@@ -86,5 +108,5 @@ int main(void)
 AI was used as a learning and checking aid, not to write the project for me.
 
 - **Debugging:** explaining the cause of bugs and edge cases, without giving corrected code.
-- **Makefile:** understanding errors and how Make works (for example, the "missing separator" error).
+- **Makefile:** understanding errors and how Make works.
 - **Implementation:** The library functions were implemented by me, with AI used to support my understanding rather than to generate their implementations.

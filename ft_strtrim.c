@@ -6,11 +6,12 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 10:18:06 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/20 10:06:59 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/24 13:27:47 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static	int	ft_search(char const *set, char c)
 {
@@ -26,15 +27,29 @@ static	int	ft_search(char const *set, char c)
 	return (0);
 }
 
-static	size_t	ft_count(char const *s, char const *set, int *start)
+static	size_t	ft_getsart(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	size_t	count;
+	size_t	start;
+
+	start = 0;
+	while (s1[start] && ft_search(set, s1[start]))
+		start++;
+	return (start);
+}
+
+static	size_t	ft_count(char const *s, char const *set)
+{
+	size_t		i;
+	size_t		j;
+	size_t		count;
 
 	i = 0;
-	j = (int)(ft_strlen(s));
-	j--;
+	if (!*s)
+		return (0);
+	if (ft_strlen(s) == 0)
+		j = 0;
+	else
+		j = ft_strlen(s) - 1;
 	count = ft_strlen(s);
 	while (s[i])
 	{
@@ -46,25 +61,21 @@ static	size_t	ft_count(char const *s, char const *set, int *start)
 		else
 			break ;
 	}
-	*start = i;
 	while (j > i && ft_search(set, s[j]))
-	{
-		count--;
 		j--;
-	}
-	return (count);
+	return (count - ft_strlen(s) + j + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
+	size_t	start;
 	size_t	count;
 
 	if (!s1)
 		return (NULL);
 	if (!set)
 		return (ft_strdup(s1));
-	start = 0;
-	count = ft_count(s1, set, &start);
+	start = ft_getsart(s1, set);
+	count = ft_count(s1, set);
 	return (ft_substr(s1, start, count));
 }

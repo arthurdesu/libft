@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 22:48:29 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/19 19:44:10 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/24 09:16:10 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2_len;
 	char	*concatenate;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
+	else if (!s1)
+		return (ft_strdup(s2));
+	else if (!s2)
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	concatenate = malloc(((s1_len + s2_len)) + 1);

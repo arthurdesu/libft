@@ -50,22 +50,19 @@ HEADER  = libft.h
 
 NAME    = libft.a
 
-%.o: %.c $(HEADER)
-	@$(CC) $(CFLAGS) -c $< -o $@
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar rc $@ $^
-	@echo "     Library is created"
 
-all: $(NAME)
+%.o: %.c $(HEADER)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJS)
-	@echo "     Object files are removed"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "     Library file is removed" 
 
 re: fclean all
 
