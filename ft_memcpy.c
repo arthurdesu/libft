@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:00:28 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/24 10:46:43 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/25 06:39:21 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (dest == src)
+		return (dest);
 	while (i < n)
 	{
 		*((unsigned char *)dest + i) = *((const unsigned char *)src + i);

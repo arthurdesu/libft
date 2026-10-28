@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:16:26 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/18 19:50:10 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/25 06:37:49 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
-	else
+	else if (d > s)
 	{
 		while (n > 0)
 		{

@@ -6,12 +6,11 @@
 /*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 10:18:06 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/24 13:27:47 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/26 07:10:42 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	int	ft_search(char const *set, char c)
 {
